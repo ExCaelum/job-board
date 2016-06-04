@@ -1,0 +1,18 @@
+<div class="jumbotron container-fluid">
+  <div class="row well">
+    <div class="text-center">
+      <h1> Captain Jobs </h1>
+    </div>
+    <div class="row col-md-6 col-md-offset-3">
+      <div class="text-center">
+        <p> Welcome to Captain Jobs, here you will see various skills created by
+          our users, each skill will contain a link to that users homepage where
+          you will find the necessary contact info.</p>
+      </div>
+      <div class="row col-md-offset-2">
+        <%= link_to "Login", login_path, :method => "get", class: 'btn btn-success' %>
+        <%= link_to "Create Account", new_user_path, :method => "get", class: "btn btn-danger col-md-offset-6" %>
+      </div>
+    </div>
+  </div>
+</div>

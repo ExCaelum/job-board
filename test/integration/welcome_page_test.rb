@@ -7,8 +7,7 @@ class WelcomePageTest < ActionDispatch::IntegrationTest
 
     assert page.has_content?("Captain Jobs")
     assert page.has_content?("Login")
-    assert page.has_contnet?("Create Account")
-    assert page.has_content?("View Skills")
+    assert page.has_content?("Create Account")
   end
 
 end
