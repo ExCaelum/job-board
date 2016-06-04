@@ -28,6 +28,7 @@ gem 'bcrypt', '~> 3.1.7'
 # gem 'unicorn'
 gem 'rails_12factor', group: :production
 gem 'bootstrap-sass', '~> 3.2.0'
+gem 'bootstrap_form'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
