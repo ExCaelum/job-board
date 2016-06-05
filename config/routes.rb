@@ -6,12 +6,16 @@ Rails.application.routes.draw do
   post '/login', to: "sessions#create"
   delete '/logout', to: "sessions#destroy"
 
-  namespace :admin do
+  # namespace :admin do
+  #   resources :skills
+  # end
+
+  resources :users, only: [:create, :new, :edit, :show, :update] do
     resources :skills
   end
 
-  resources :users do
-    resources :skills
+  namespace :all do
+    resources :skills, only: [:index]
   end
 
 end

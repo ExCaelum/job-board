@@ -12,6 +12,6 @@ class UserLoginTest < ActionDispatch::IntegrationTest
     fill_in "Password", with: "password"
     click_button "Login"
 
-    assert page.has_content?("Parker's Homepage")
+    assert page.has_content?("Welcome Parker")
   end
 end

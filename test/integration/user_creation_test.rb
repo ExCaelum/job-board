@@ -9,6 +9,6 @@ class UserCreationTest < ActionDispatch::IntegrationTest
     fill_in "Phone number", with: "000-000-0000"
     click_button "Create User"
 
-    assert page.has_content?("Parker's Homepage")
+    assert page.has_content?("Welcome Parker")
   end
 end

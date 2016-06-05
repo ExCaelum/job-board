@@ -11,14 +11,14 @@ class UserCanEditTest < ActionDispatch::IntegrationTest
     fill_in "Username", with: user.username
     fill_in "Password", with: user.password
     click_button "Login"
-    assert page.has_content?("Parker's Homepage")
+    assert page.has_content?("Welcome Parker")
 
     click_link "Edit Information"
     assert page.has_content?("Edit Information")
     fill_in "Username", with: "NewUser"
     fill_in "Password", with: user.password
     click_button "Update User"
-    assert page.has_content?("NewUser's Homepage")
+    assert page.has_content?("Welcome NewUser")
   end
 
 end

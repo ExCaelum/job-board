@@ -11,7 +11,7 @@ class UserLogoutTest < ActionDispatch::IntegrationTest
     fill_in "Username", with: user.username
     fill_in "Password", with: user.password
     click_button "Login"
-    assert page.has_content?("Parker's Homepage")
+    assert page.has_content?("Welcome Parker")
 
     click_link "Logout"
 
