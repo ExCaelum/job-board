@@ -1,0 +1,30 @@
+<% if @user == current_user %>
+  <div class="container-fluid well">
+    <div class="jumbotron text-center">
+      <h1>Your Skills</h1>
+    </div>
+    <div class="row">
+      <% current_user.skills.each do |skill| %>
+        <div class="col-md-4 text-center">
+          <h3><%= link_to skill.name, user_skill_path(current_user, skill), class: "text-muted" %></h3>
+        </div>
+      <% end %>
+    </div>
+  </div>
+<% else %>
+  <div class="container-fluid well">
+    <div class="jumbotron text-center">
+      <h1><%= @user.username %>'s Skills</h1>
+    </div>
+    <div class="row">
+      <% @user.skills.each do |skill| %>
+        <div class="col-md-4 text-center">
+            <h3><%= link_to skill.name, user_skill_path(current_user, skill), class: "text-muted" %></h3>
+            <p>
+              <%= skill.description %>
+            </p>
+          </div>
+      <% end %>
+    </div>
+  </div>
+<% end %>

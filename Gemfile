@@ -38,8 +38,10 @@ group :development, :test do
   gem 'byebug'
   gem 'capybara'
   gem 'launchy'
+  gem 'mocha'
   gem 'shoulda', '~> 3.5'
   gem 'shoulda-matchers', '~> 2.0'
+  gem 'simplecov'
 end
 
 group :development do

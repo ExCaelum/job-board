@@ -18,4 +18,6 @@ Rails.application.routes.draw do
     resources :skills, only: [:index]
   end
 
+  resources :tags, only: [:show]
+
 end

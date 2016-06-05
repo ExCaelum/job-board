@@ -5,6 +5,7 @@
         <li><%= link_to "#{current_user.username}", user_path(current_user) %></li>
       </ul>
       <ul class='nav navbar-nav navbar-right'>
+      <li><%= link_to "All Skills", all_skills_path %></li>
       <li><%= link_to "Logout", logout_path, method: :delete %></li>
 
       <!-- <li><a href='/robots/view'>Robot Profiles</a></li> -->

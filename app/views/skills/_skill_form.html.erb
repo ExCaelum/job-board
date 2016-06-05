@@ -1,0 +1,10 @@
+<%= form_for [current_user, @skill] do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name, class: "form-control" %>
+  <%= f.label :description %>
+  <%= f.text_area :description, class: "form-control" %>
+  <%= f.label :tag_list %>
+  <%= f.text_area :tag_list %>
+
+  <%= f.submit class: "btn btn-primary col-md-offset-4" %>
+<% end %>
