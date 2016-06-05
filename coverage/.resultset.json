@@ -62,6 +62,20 @@
         1,
         null
       ],
+      "/Users/Caelum/Turing/Module 2/projects/job_board/app/controllers/tags_controller.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
       "/Users/Caelum/Turing/Module 2/projects/job_board/app/controllers/application_controller.rb": [
         1,
         null,
@@ -82,44 +96,6 @@
       ],
       "/Users/Caelum/Turing/Module 2/projects/job_board/app/helpers/application_helper.rb": [
         1,
-        null
-      ],
-      "/Users/Caelum/Turing/Module 2/projects/job_board/app/controllers/admin/tags_controller.rb": [
-        1,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        2,
-        2,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        null,
-        0,
-        null,
-        null,
-        null,
-        1,
-        0,
-        0,
-        0,
-        null,
-        null,
-        1,
-        null,
-        1,
-        1,
-        null,
         null
       ],
       "/Users/Caelum/Turing/Module 2/projects/job_board/app/controllers/users_controller.rb": [
@@ -166,7 +142,15 @@
         null,
         null
       ],
-      "/Users/Caelum/Turing/Module 2/projects/job_board/app/controllers/tags_controller.rb": [
+      "/Users/Caelum/Turing/Module 2/projects/job_board/app/controllers/welcome_controller.rb": [
+        1,
+        null,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/Caelum/Turing/Module 2/projects/job_board/app/controllers/admin/tags_controller.rb": [
         1,
         null,
         1,
@@ -174,6 +158,43 @@
         null,
         null,
         1,
+        2,
+        2,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        0,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/Caelum/Turing/Module 2/projects/job_board/app/controllers/admin/skills_controller.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
         1,
         1,
         null,
@@ -234,14 +255,6 @@
         null,
         null
       ],
-      "/Users/Caelum/Turing/Module 2/projects/job_board/app/controllers/welcome_controller.rb": [
-        1,
-        null,
-        1,
-        null,
-        null,
-        null
-      ],
       "/Users/Caelum/Turing/Module 2/projects/job_board/app/controllers/sessions_controller.rb": [
         1,
         null,
@@ -287,6 +300,6 @@
         0
       ]
     },
-    "timestamp": 1465154141
+    "timestamp": 1465155549
   }
 }
