@@ -7,7 +7,7 @@ class UserCreationTest < ActionDispatch::IntegrationTest
     fill_in "Password", with: "Password"
     fill_in "Email address", with: "Sample@gmail.com"
     fill_in "Phone number", with: "000-000-0000"
-    click_button "Create Account"
+    click_button "Create User"
 
     assert page.has_content?("Parker's Homepage")
   end
