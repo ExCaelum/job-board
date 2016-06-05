@@ -1,0 +1,15 @@
+<div class="container-fluid well">
+  <div class="jumbotron text-center">
+    <h1>All Skills</h1>
+  </div>
+  <div class="row">
+    <% @skills.each do |skill| %>
+      <div class="col-md-4 text-center">
+          <h3><%= link_to skill.name, user_skill_path(skill.user, skill), class: "text-muted" %></h3>
+          <p>
+            <%= skill.description %>
+          </p>
+        </div>
+    <% end %>
+  </div>
+</div>

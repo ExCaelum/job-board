@@ -6,9 +6,10 @@ Rails.application.routes.draw do
   post '/login', to: "sessions#create"
   delete '/logout', to: "sessions#destroy"
 
-  # namespace :admin do
-  #   resources :skills
-  # end
+  namespace :admin do
+    resources :skills
+    resources :tags
+  end
 
   resources :users, only: [:create, :new, :edit, :show, :update] do
     resources :skills
@@ -18,6 +19,6 @@ Rails.application.routes.draw do
     resources :skills, only: [:index]
   end
 
-  resources :tags, only: [:show]
+  resources :tags, only: [:show, :index]
 
 end

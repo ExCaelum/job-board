@@ -15,4 +15,6 @@ class User < ActiveRecord::Base
                             uniqueness: true
 
   validates :role, presence: true
+
+  enum role: ["defualt", "admin"]
 end
