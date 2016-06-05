@@ -9,7 +9,7 @@ class UserCanViewOtherPagesTest < ActionDispatch::IntegrationTest
     user2 = User.create(username: "David", password: "password",
                         email_address: "other@gmail.com",
                         phone_number: "111-111-1111")
-
+    ApplicationController.any_instance.stubs(:current_user).returns(user)
     visit user_path(user2)
     assert page.has_content?("David's Homepage")
   end

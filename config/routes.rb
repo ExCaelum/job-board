@@ -19,6 +19,10 @@ Rails.application.routes.draw do
     resources :skills, only: [:index]
   end
 
+  namespace :guest do
+    resources :skills, only: [:index]
+  end
+
   resources :tags, only: [:show, :index]
 
 end

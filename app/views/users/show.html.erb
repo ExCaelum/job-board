@@ -1,41 +1,55 @@
-
-<% if @user == current_user %>
+<% if current_user %>
+  <% if @user == current_user %>
+    <div class="container-fluid">
+      <div class="jumbotron">
+        <div class="text-center">
+          <h1>Welcome <%= current_user.username %></h1>
+        </div>
+        <br><br>
+        <div class="row text-center">
+          <div class="col-md-2 col-md-offset-3">
+            <%= link_to "Edit Information", edit_user_path(current_user), class: "btn btn-warning btn-xs" %>
+          </div>
+          <div class="col-md-2">
+            <%= link_to "Create Skill", new_user_skill_path(current_user), class: "btn btn-success btn-xs" %>
+          </div>
+          <div class="col-md-2">
+            <%= link_to "Your Skills", user_skills_path(current_user), class: "btn btn-primary btn-xs" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% else %>
   <div class="container-fluid">
     <div class="jumbotron">
       <div class="text-center">
-        <h1>Welcome <%= current_user.username %></h1>
+        <h1><%= @user.username %>'s Homepage</h1>
       </div>
-      <br><br>
       <div class="row text-center">
-        <div class="col-md-2 col-md-offset-3">
-          <%= link_to "Edit Information", edit_user_path(current_user), class: "btn btn-warning btn-xs" %>
+        <p> Email: <%= @user.email_address %></p>
+        <p> Phone: <%= @user.phone_number %></p>
+        <br>
+        <div class="col-md-2 col-md-offset-4">
+          <%= link_to "All Skills", all_skills_path, class: "btn btn-success btn-xs" %>
         </div>
         <div class="col-md-2">
-          <%= link_to "Create Skill", new_user_skill_path(current_user), class: "btn btn-success btn-xs" %>
-        </div>
-        <div class="col-md-2">
-          <%= link_to "Your Skills", user_skills_path(current_user), class: "btn btn-primary btn-xs" %>
+          <%= link_to "#{@user.username}'s' Skills", user_skills_path(@user), class: "btn btn-primary btn-xs" %>
         </div>
       </div>
     </div>
   </div>
+  <% end %>
 <% else %>
-<div class="container-fluid">
-  <div class="jumbotron">
-    <div class="text-center">
-      <h1><%= @user.username %>'s Homepage</h1>
-    </div>
-    <div class="row text-center">
-      <p> Email: <%= @user.email_address %></p>
-      <p> Phone: <%= @user.phone_number %></p>
-      <br>
-      <div class="col-md-2 col-md-offset-4">
-        <%= link_to "All Skills", all_skills_path, class: "btn btn-success btn-xs" %>
+  <div class="container-fluid">
+    <div class="jumbotron">
+      <div class="text-center">
+        <h1>Sorry!</h1>
       </div>
-      <div class="col-md-2">
-        <%= link_to "#{@user.username}'s' Skills", user_skills_path(@user), class: "btn btn-primary btn-xs" %>
+      <div class="text-center">
+        <p>
+          Please Sign up to view User info.
+        </p>
       </div>
     </div>
   </div>
-</div>
 <% end %>

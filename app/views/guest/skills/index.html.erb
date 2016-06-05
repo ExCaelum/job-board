@@ -1,0 +1,19 @@
+<div class="container-fluid well">
+  <div class="jumbotron text-center">
+    <h1>All Skills</h1>
+    <br>
+    <p>
+      Sign up to see details about our Users!
+    </p>
+  </div>
+  <div class="row">
+    <% @skills.each do |skill| %>
+      <div class="col-md-4 text-center">
+          <h3><%= skill.name %></h3>
+          <p>
+            <%= skill.description %>
+          </p>
+        </div>
+    <% end %>
+  </div>
+</div>

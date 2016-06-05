@@ -21,4 +21,23 @@ class UserCanEditTest < ActionDispatch::IntegrationTest
     assert page.has_content?("Welcome NewUser")
   end
 
+  test "User entered invalid information" do
+    user = User.create(username: "Parker", password: "password",
+                       email_address: "sample@gmail.com",
+                       phone_number: "000-000-0000")
+
+    visit login_path
+    fill_in "Username", with: user.username
+    fill_in "Password", with: user.password
+    click_button "Login"
+    assert page.has_content?("Welcome Parker")
+
+    click_link "Edit Information"
+    assert page.has_content?("Edit Information")
+    fill_in "Username", with: ""
+    fill_in "Password", with: user.password
+    click_button "Update User"
+    assert page.has_content?("Edit Information")
+  end
+
 end
