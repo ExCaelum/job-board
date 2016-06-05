@@ -1,0 +1,21 @@
+<% if current_user.admin? %>
+  <div class="row well form-group">
+    <div class="col-md-4 text-center">
+      <h1> Edit Skill </h1>
+    </div>
+    <div class="col-md-8">
+      <%= form_for [:admin, @skill] do |f| %>
+        <%= f.label :name %>
+        <%= f.text_field :name, class: "form-control" %>
+        <%= f.label :description %>
+        <%= f.text_area :description, class: "form-control" %>
+        <%= f.label :tag_list %>
+        <%= f.text_area :tag_list, class: "form-control" %>
+        <br>
+        <%= f.submit class: "btn btn-primary col-md-offset-4" %>
+      <% end %>
+    </div>
+  </div>
+<% else %>
+  <%= render partial: 'error' %>
+<% end %>

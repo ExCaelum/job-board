@@ -14,7 +14,7 @@
     <div class="row">
       <% @skills.each do |skill| %>
         <div class="col-md-4 text-center">
-            <h3><%= link_to skill.name, user_skill_path(skill.user, skill), class: "text-muted" %></h3>
+            <h3><%= link_to skill.name, admin_skill_path(skill), class: "text-muted" %></h3>
             <p>
               <%= skill.description %>
             </p>
