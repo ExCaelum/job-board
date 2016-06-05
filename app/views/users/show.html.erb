@@ -1,3 +1,13 @@
-<h1><%= current_user.username %>'s Homepage</h1>
-
-<%= link_to "Edit Information", edit_user_path(current_user) %>
+<div class="container-fluid">
+  <div class="jumbotron">
+    <div class="text-center">
+      <h1><%= current_user.username %>'s Homepage</h1>
+    </div>
+    <div class="row text-center">
+      <p> Email: <%= current_user.email_address %></p>
+      <p> Phone: <%= current_user.phone_number %></p>
+      <br>
+      <%= link_to "Edit Information", edit_user_path(current_user), class: "btn btn-warning btn-xs" %>
+    </div>
+  </div>
+</div>
