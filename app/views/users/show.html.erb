@@ -1,13 +1,28 @@
+
+<% if @user == current_user %>
+  <div class="container-fluid">
+    <div class="jumbotron">
+      <div class="text-center">
+        <h1><%= current_user.username %>'s Homepage</h1>
+      </div>
+      <div class="row text-center">
+        <p> Email: <%= current_user.email_address %></p>
+        <p> Phone: <%= current_user.phone_number %></p>
+        <br>
+        <%= link_to "Edit Information", edit_user_path(current_user), class: "btn btn-warning btn-xs" %>
+      </div>
+    </div>
+  </div>
+<% else %>
 <div class="container-fluid">
   <div class="jumbotron">
     <div class="text-center">
-      <h1><%= current_user.username %>'s Homepage</h1>
+      <h1><%= @user.username %>'s Homepage</h1>
     </div>
     <div class="row text-center">
-      <p> Email: <%= current_user.email_address %></p>
-      <p> Phone: <%= current_user.phone_number %></p>
-      <br>
-      <%= link_to "Edit Information", edit_user_path(current_user), class: "btn btn-warning btn-xs" %>
+      <p> Email: <%= @user.email_address %></p>
+      <p> Phone: <%= @user.phone_number %></p>
     </div>
   </div>
 </div>
+<% end %>
