@@ -7,19 +7,12 @@
       <% @tags.each do |tag| %>
         <div class="col-md-4 text-center">
           <body>
-            <!-- DO NOT HAVE THIS IF STATEMENT IN THE ADMIN NAMESPACE -->
-            <% if tag.skills.count > 0 %>
-              <h3><%= link_to tag.name, tag_path(tag), class: "text-muted" %></h3> <p> Skills: <%= tag.skills.count %></p>
-            <% end %>
+            <h3><%= link_to tag.name, admin_tag_path(tag), class: "text-muted" %></h3> <p> Skills: <%= tag.skills.count %></p>
           </body>
         </div>
       <% end %>
     </div>
   </div>
 <% else %>
-<div class="text-center">
-  <h1>Whoops</h1>
-  <h1><img src="https://s-media-cache-ak0.pinimg.com/736x/bb/13/b9/bb13b918ce14d8513488b8a0785c9062.jpg"></h1>
-  <br>
-</div>
+  <%= render partial: 'error' %>
 <% end %>

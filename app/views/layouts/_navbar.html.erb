@@ -3,29 +3,14 @@
     <% if current_user %>
       <ul class="nav navbar-nav">
         <li><%= link_to "#{current_user.username}", user_path(current_user) %></li>
+        <% if current_user.admin? %>
+          <li><%= link_to "Admin Tags", admin_tags_path %>
+        <% end %>
       </ul>
       <ul class='nav navbar-nav navbar-right'>
       <li><%= link_to "All Skills", all_skills_path %></li>
       <li><%= link_to "Tags", tags_path %></li>
       <li><%= link_to "Logout", logout_path, method: :delete %></li>
-
-      <!-- <li><a href='/robots/view'>Robot Profiles</a></li> -->
-      <!-- <li><a href='/robots'>Robot Index</a></li> -->
-      <!-- <li><a href='/robots/new'>New Robot</a></li> -->
       </ul>
     <% end %>
 </div>
-
-
-<%# if current_user %>
-    <!-- Welcome, <%#= link_to "#{current_user.username}", user_path(current_user) %> -->
-    <%#= link_to "Logout", logout_path, method: :delete %>
-
-
-    <%# if current_user.admin? %>
-      <%#= link_to "Tools", admin_tools_path %>
-      <%#= link_to "Admin Categories", admin_categories_path %>
-    <%# else %>
-      <%#= link_to "Categories", categories_path %>
-    <%# end %>
-  <%# end %>
