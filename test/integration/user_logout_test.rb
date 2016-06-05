@@ -16,5 +16,8 @@ class UserLogoutTest < ActionDispatch::IntegrationTest
     click_link "Logout"
 
     refute page.has_content?("Parker's Homepage")
+    assert page.has_content?("Captain Jobs")
+    assert page.has_content?("Login")
+    assert page.has_content?("Create Account")
   end
 end
