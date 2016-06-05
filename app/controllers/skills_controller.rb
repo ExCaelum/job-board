@@ -16,6 +16,7 @@ class SkillsController < ApplicationController
 
   def show
     @skill = Skill.find(params[:id])
+    @user = User.find(params[:user_id])
   end
 
   def index
@@ -25,6 +26,21 @@ class SkillsController < ApplicationController
 
   def edit
     @skill = Skill.find(params[:id])
+  end
+
+  def update
+    @skill = Skill.find(params[:id])
+    if @skill.update(skill_params)
+      redirect_to user_skill_path(current_user, @skill)
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @skill = Skill.find(params[:id])
+    @skill.destroy
+    redirect_to user_skills_path(current_user)
   end
 
   private

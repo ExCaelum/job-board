@@ -19,7 +19,7 @@
     <div class="row">
       <% @user.skills.each do |skill| %>
         <div class="col-md-4 text-center">
-            <h3><%= link_to skill.name, user_skill_path(current_user, skill), class: "text-muted" %></h3>
+            <h3><%= link_to skill.name, user_skill_path(@user, skill), class: "text-muted" %></h3>
             <p>
               <%= skill.description %>
             </p>

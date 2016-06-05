@@ -13,7 +13,7 @@ class UserCanEditTheirSkillTest < ActionDispatch::IntegrationTest
     assert page.has_content?("Edit Skill")
     fill_in "Name", with: "Updated Skill"
     fill_in "Description", with: "This is an updated skill"
-    click_button "Update"
+    click_button "Update Skill"
     assert page.has_content?("Parker")
     assert page.has_content?("Updated Skill")
     assert page.has_content?("This is an updated skill")
