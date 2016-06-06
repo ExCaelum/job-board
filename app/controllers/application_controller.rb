@@ -19,7 +19,7 @@ class ApplicationController < ActionController::Base
   end
 
   def render_error
-    render :error, locals: { error_message: "Invalid URL"}
+    render file: '/public/not_found'
   end
 
 end

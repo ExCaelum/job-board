@@ -9,7 +9,7 @@ class ErrorPageIsRenderedTest < ActionDispatch::IntegrationTest
     ApplicationController.any_instance.stubs(:current_user).returns(user)
     visit user_path(2)
     assert page.has_content?("Whoops")
-    assert page.has_content?("Invalid URL")
+    assert page.has_content?("Error 404")
   end
 
 end

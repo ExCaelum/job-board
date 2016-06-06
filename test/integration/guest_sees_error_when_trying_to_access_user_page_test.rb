@@ -8,8 +8,7 @@ class GuestSeesErrorWhenTryinToAccessUserPageTest < ActionDispatch::IntegrationT
                        phone_number: "000-000-0000")
 
     visit user_path(user)
-    assert page.has_content?("Sorry!")
-    assert page.has_content?("Please Sign up to view User info.")
+    assert page.has_content?("Error 403")
   end
 
 end

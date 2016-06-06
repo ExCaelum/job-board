@@ -1,5 +1,5 @@
+# Skills Controller for the admin namespace
 class Admin::SkillsController < Admin::BaseController
-
   def index
     @skills = Skill.all
   end
@@ -32,5 +32,4 @@ class Admin::SkillsController < Admin::BaseController
   def skill_params
     params.require(:skill).permit(:name, :description, :tag_list)
   end
-
 end
