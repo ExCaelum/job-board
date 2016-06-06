@@ -5,6 +5,7 @@ class SkillsController < ApplicationController
   end
 
   def create
+    #no need for the @ 
     @skill = Skill.create(skill_params)
     @skill.user = current_user
     if @skill.save

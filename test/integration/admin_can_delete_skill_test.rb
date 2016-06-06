@@ -3,7 +3,6 @@ require 'test_helper'
 class AdminCanDeleteSkillTest < ActionDispatch::IntegrationTest
 
   test "Admin can delete others skills" do
-    skip
     user = User.create(username: "Parker", password: "password",
                        email_address: "sample@gmail.com",
                        phone_number: "000-000-0000",
