@@ -14,9 +14,10 @@ class UserCanDeleteTheirSkillTest < ActionDispatch::IntegrationTest
     assert page.has_content?("Parker")
     assert page.has_content?("New Skill")
     assert page.has_content?("This is a new Skill")
-    click_link "Delete"
-    assert page.has_content?("Your Skills")
 
+    click_on "Delete"
+    assert page.has_content?("Your Skills")
+    
     # The delete is working in development, but not in test
     refute page.has_content?("New Skill")
   end

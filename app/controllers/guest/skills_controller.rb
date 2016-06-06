@@ -1,4 +1,5 @@
 class Guest::SkillsController < ApplicationController
+  skip_before_action :require_log_in
 
   def index
     @skills = Skill.all

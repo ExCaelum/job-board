@@ -1,17 +1,13 @@
-<% if current_user.admin? %>
-  <div class="row well form-group">
-    <div class="col-md-4 text-center">
-      <h1> Edit Tag </h1>
-    </div>
-    <div class="col-md-8">
-      <%= form_for [:admin, @tag] do |f|  %>
-        <%= f.label :name %>
-        <%= f.text_field :name, class: "form-control"%>
-        <br>
-        <%= f.submit class: "btn btn-primary col-md-offset-4"%>
-      <% end %>
-    </div>
+<div class="row well form-group">
+  <div class="col-md-4 text-center">
+    <h1> Edit Tag </h1>
   </div>
-<% else %>
-  <%= render partial: 'error' %>
-<% end %>
+  <div class="col-md-8">
+    <%= form_for [:admin, @tag] do |f|  %>
+      <%= f.label :name %>
+      <%= f.text_field :name, class: "form-control"%>
+      <br>
+      <%= f.submit class: "btn btn-primary col-md-offset-4"%>
+    <% end %>
+  </div>
+</div>
