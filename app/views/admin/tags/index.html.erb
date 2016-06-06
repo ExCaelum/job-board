@@ -1,18 +1,14 @@
-<% if current_user.admin? %>
-  <div class="container-fluid well">
-    <div class="jumbotron text-center">
-      <h1>Admin Tags</h1>
-    </div>
-    <div class="row">
-      <% @tags.each do |tag| %>
-        <div class="col-md-4 text-center">
-          <body>
-            <h3><%= link_to tag.name, admin_tag_path(tag), class: "text-muted" %></h3> <p> Skills: <%= tag.skills.count %></p>
-          </body>
-        </div>
-      <% end %>
-    </div>
+<div class="container-fluid well">
+  <div class="jumbotron text-center">
+    <h1>Admin Tags</h1>
   </div>
-<% else %>
-  <%= render partial: 'error' %>
-<% end %>
+  <div class="row">
+    <% @tags.each do |tag| %>
+      <div class="col-md-4 text-center">
+        <body>
+          <h3><%= link_to tag.name, admin_tag_path(tag), class: "text-muted" %></h3> <p> Skills: <%= tag.skills.count %></p>
+        </body>
+      </div>
+    <% end %>
+  </div>
+</div>

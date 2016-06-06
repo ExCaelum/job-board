@@ -48,5 +48,5 @@ class SkillsController < ApplicationController
   def skill_params
     params.require(:skill).permit(:name, :description, :tag_list)
   end
-
+  
 end
