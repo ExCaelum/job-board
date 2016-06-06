@@ -1,4 +1,4 @@
-# Skills Controller for the admin namespace
+# Skills Controller for the admin namespace, admin crud for skills
 class Admin::SkillsController < Admin::BaseController
   def index
     @skills = Skill.all

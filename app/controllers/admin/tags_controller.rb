@@ -1,5 +1,5 @@
+# Tags controller for the admin namespace, admin crud for tags
 class Admin::TagsController < Admin::BaseController
-
   def index
     @tags = Tag.all
   end

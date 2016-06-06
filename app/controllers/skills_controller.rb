@@ -1,5 +1,5 @@
+# This is the skills controller, crud for skills
 class SkillsController < ApplicationController
-
   def new
     @skill = current_user.skills.new
   end
@@ -48,5 +48,4 @@ class SkillsController < ApplicationController
   def skill_params
     params.require(:skill).permit(:name, :description, :tag_list)
   end
-  
 end

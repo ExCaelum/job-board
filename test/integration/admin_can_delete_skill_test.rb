@@ -1,7 +1,6 @@
-require 'test_helper'
+require "test_helper"
 
 class AdminCanDeleteSkillTest < ActionDispatch::IntegrationTest
-
   test "Admin can delete others skills" do
     skip
     user = User.create(username: "Parker", password: "password",
@@ -9,10 +8,11 @@ class AdminCanDeleteSkillTest < ActionDispatch::IntegrationTest
                        phone_number: "000-000-0000",
                        role: 1)
     user2 = User.create(username: "David", password: "password",
-                       email_address: "other@gmail.com",
-                       phone_number: "111-111-1111")
+                        email_address: "other@gmail.com",
+                        phone_number: "111-111-1111")
     ApplicationController.any_instance.stubs(:current_user).returns(user)
-    skill = user2.skills.create(name: "New Skill", description: "This is a new Skill")
+    skill = user2.skills.create(name: "New Skill",
+                                description: "This is a new Skill")
 
     visit admin_skill_path(skill)
     assert page.has_content?("David")
@@ -24,5 +24,4 @@ class AdminCanDeleteSkillTest < ActionDispatch::IntegrationTest
     # The delete is working in development, but not in test
     refute page.has_content?("New Skill")
   end
-
 end

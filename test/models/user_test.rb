@@ -1,5 +1,6 @@
 require 'test_helper'
 
+# Test for the User Model
 class UserTest < ActiveSupport::TestCase
   should validate_presence_of(:username)
   should validate_uniqueness_of(:username)
@@ -10,7 +11,7 @@ class UserTest < ActiveSupport::TestCase
   should validate_uniqueness_of(:email_address)
 
   should validate_presence_of(:phone_number)
-  should validate_uniqueness_of (:phone_number)
+  should validate_uniqueness_of(:phone_number)
 
   should validate_presence_of(:role)
 

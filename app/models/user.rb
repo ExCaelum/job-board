@@ -1,3 +1,4 @@
+# Model for the user
 class User < ActiveRecord::Base
   has_secure_password
 
@@ -16,5 +17,5 @@ class User < ActiveRecord::Base
 
   validates :role, presence: true
 
-  enum role: ["defualt", "admin"]
+  enum role: %w(default admin)
 end

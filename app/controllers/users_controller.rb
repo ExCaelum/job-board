@@ -1,3 +1,4 @@
+# This is the users controller, crud for users
 class UsersController < ApplicationController
   skip_before_action :require_log_in, only: [:new, :create]
 
@@ -11,7 +12,7 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       redirect_to @user
     else
-      flash.now[:error] = @user.errors.full_messages.join(", ")
+      flash.now[:error] = @user.errors.full_messages.join(', ')
       render :new
     end
   end
@@ -36,6 +37,9 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:username, :password, :email_address, :phone_number)
+    params.require(:user).permit(:username,
+                                 :password,
+                                 :email_address,
+                                 :phone_number)
   end
 end
